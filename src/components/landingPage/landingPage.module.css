@@ -1,0 +1,19 @@
+.pageBase{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+.gemoLogo{
+    max-width: 80px;
+}
+.gemoText{
+    color: #6050dc;
+}
+.githubParag{
+    text-align: center;
+    font-size: 29px;
+    margin-top: 80px;
+    font-family: MONOSPACE;
+    letter-spacing: 2px;
+}
