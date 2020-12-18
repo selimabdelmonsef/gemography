@@ -18,8 +18,8 @@ export class landingPage extends React.Component {
                         Find out the most starred Github repos that were created in the last 30 days
                     </p>
                 </div>
-                <div className = {styles.letsGoBtn}>
-                    <button className={styles.letsGoStyle}> Lets Go!!</button>
+                <div className={styles.letsGoBtn}>
+                    <button onClick= {()=>this.props.history.push("/starredgithubpage")} className={styles.letsGoStyle}> Lets Go!!</button>
                 </div>
             </div>
         )
