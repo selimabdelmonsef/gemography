@@ -42,7 +42,7 @@ class starredGithubPage extends React.Component {
                             <p className={styles.issues_count}>Number of issues: {element?.open_issues_count}</p>
 
                         </div>
-                    )
+                    );
 
                 })}
 
