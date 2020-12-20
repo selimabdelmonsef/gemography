@@ -1,6 +1,6 @@
 .starred_github_page{
     background-color: aliceblue;
-    width: 100%;
+    margin: 0px 15px;
 }
 .title{
     text-align: center;
@@ -24,9 +24,12 @@
     display: flex;
     
 }
+.app{
+    display: flex;
+}
 .desc_name{
     font-family: sans-serif;
-    font-size: 45px;
+    font-size: 11px;
     text-align: center;
 }
 .count{
