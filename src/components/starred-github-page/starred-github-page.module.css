@@ -44,3 +44,7 @@
     color: red;
     font-weight: 800;
 }
+.spinner{
+    text-align: center;
+    padding: 100px;
+}

@@ -5,13 +5,12 @@ import { current_page } from '../components/shared/pagination/pagination'
 
 
 export const _GetRepositoryName = (data) => {
-    // console.log(current_page)
     return (dispatch) => {
-        // setInterval(()=>{
-        //     console.log(currentPage2)
-        // }, 1000)
-        // console.log('selim')
-         Axios.get(api.github_api.replace('{{today}}', today).replace('{{currentPage}}', current_page)).
+        dispatch({
+            type: "LOADING",
+            data: true
+          });
+        Axios.get(api.github_api.replace('{{today}}', today).replace('{{currentPage}}', current_page)).
 
             then(response => {
                 console.log(current_page)
@@ -36,11 +35,12 @@ export const _GetRepositoryName = (data) => {
                         type: "GET_REPOSITORY_DATA",
                         data: data
                     });
-                    // console.log(initState)
+                    dispatch({
+                        type: "LOADING",
+                        data: false
+                      });
 
                 });
-                // console.log(data);
-                // console.log(response.data);
             }).catch(error => {
                 console.log(error);
             });

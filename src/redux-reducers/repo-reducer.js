@@ -1,4 +1,4 @@
-const initState = [];
+const initState = [{ loading: true }];
 
 export default function RepoReducer(state = initState, action) {
 
@@ -7,7 +7,12 @@ export default function RepoReducer(state = initState, action) {
             return {
                 ...state,
                 data: action.data
-            }
+            };
+        case "LOADING":
+            return {
+                ...state,
+                loading: action.data
+            };
         default: return state;
     }
 }

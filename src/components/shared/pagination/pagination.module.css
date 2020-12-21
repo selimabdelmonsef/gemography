@@ -1,0 +1,15 @@
+.marked_page{
+    color: red;
+}
+.marked_page:focus{
+    color:red;
+    background: none;
+}
+/* .marked_page:visited{
+    color:red;
+    background: none;
+} */
+/* .marked_page:hover{
+    background-color: none;
+    border-color: none;
+} */
