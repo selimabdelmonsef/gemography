@@ -32,3 +32,18 @@
     justify-content: center;
     align-items: center;
 }
+
+@media only screen and (min-width:768px){
+    .gemoLogo{
+        max-width: 7%;
+    }
+    .gemoText{
+        font-size: 70px;
+    }
+    .githubParag{
+        margin-top: 100px;
+    }  
+    .letsGoBtn{
+        margin-top: 80px;
+    }
+}
