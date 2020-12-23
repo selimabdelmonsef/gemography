@@ -2,6 +2,8 @@ import Axios from 'axios';
 import { api } from '../constants/apis.constant';
 import { today } from '../utils/utils';
 import { current_page } from '../components/shared/pagination/pagination'
+import { curr } from '../components/shared/scroll/scroll'
+import {currentPage} from '../components/starred-github-page/starred-github-page'
 
 
 export const _GetRepositoryName = (data) => {
@@ -9,11 +11,11 @@ export const _GetRepositoryName = (data) => {
         dispatch({
             type: "LOADING",
             data: true
-          });
-        Axios.get(api.github_api.replace('{{today}}', today).replace('{{currentPage}}', current_page)).
+        });
+        Axios.get(api.github_api.replace('{{today}}', today).replace('{{currentPage}}', curr)).
 
             then(response => {
-                console.log(current_page)
+                console.log(curr)
                 console.log(response)
                 let data = [];
                 response.data.items.forEach((element, index) => {
@@ -33,12 +35,12 @@ export const _GetRepositoryName = (data) => {
 
                     dispatch({
                         type: "GET_REPOSITORY_DATA",
-                        data: data
+                        data: data,
                     });
                     dispatch({
                         type: "LOADING",
                         data: false
-                      });
+                    });
 
                 });
             }).catch(error => {

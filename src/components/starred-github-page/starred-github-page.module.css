@@ -19,6 +19,7 @@
     color: slategrey;
     font-weight: 800;
     margin: 0px 15px;
+    font-size: 10px;
 }
 .desc_star{
     display: flex;
@@ -54,6 +55,9 @@
 
     .desc_name{
         font-size: 50px;
+    }
+    .description_base{
+        font-size: 20px;
     }
 
 }
