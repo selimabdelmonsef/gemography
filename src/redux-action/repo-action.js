@@ -1,9 +1,6 @@
 import Axios from 'axios';
 import { api, github_allApi } from '../constants/apis.constant';
 import { today } from '../utils/utils';
-import { current_page } from '../components/shared/pagination/pagination'
-import { curr } from '../components/shared/scroll/scroll'
-import { currPage } from '../components/starred-github-page/starred-github-page'
 
 var currentPage = 0;
 export const _GetRepositoryName = () => (dispatch, data) => {

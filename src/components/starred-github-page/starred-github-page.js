@@ -3,14 +3,10 @@ import { connect } from "react-redux";
 import { _GetRepositoryName, _AllData } from "../../redux-action/repo-action";
 import styles from "./starred-github-page.module.css";
 import Avatar from "react-avatar";
-// import PaginationFooter from "../shared/pagination";
 import { SpinnerFooter } from "../shared/spinner/spinner";
 import InfiniteScroll from "react-infinite-scroll-component";
-// import ReactList from "react-list";
 
-// export var currPage = 0;
 export let topRatedMovies = [];
-// export let initialData = []
 export var x = -1;
 export var counting = -1;
 
