@@ -15,6 +15,11 @@ class PaginationFooter extends React.Component {
         }
     }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 5858fa6910aadd5788c0d083babc063ddf828e56
     handleClick = async (currentPage) => {
 
         if (currentPage >= this.state.count.length) {
@@ -40,6 +45,7 @@ class PaginationFooter extends React.Component {
             <div >
                 <nav aria-label="Page navigation example">
                     <ul class="pagination justify-content-center">
+<<<<<<< HEAD
                         {this.state.count.map((el, i) =>                 
                             <li class="page-item">
                                 <a className={classnames("page-link", styles.marked_page)} href={"#" + (i + 1)} onClick={() => this.handleClick(i + 1)}>
@@ -49,6 +55,42 @@ class PaginationFooter extends React.Component {
 
                         )}
                          ...
+=======
+                        <li class="page-item">
+                            {current_page == 1 ?
+                                <a className={classnames("page-link", styles.marked_page)} href="#page1">
+                                    1
+                            </a>
+                                :
+                                <a class="page-link" href="#page1" onClick={() => this.handleClick(1)}>
+                                    1
+                            </a>
+                            }
+                        </li>
+                        <li class="page-item">
+                            {current_page == 2 ?
+                                <a className={classnames("page-link", styles.marked_page)} href="#page2">
+                                    2
+                            </a>
+                                :
+                                <a class="page-link" href="#page2" onClick={() => this.handleClick(2)}>
+                                    2
+                            </a>
+                            }
+                        </li>
+                        <li class="page-item">
+                            {current_page == 3 ?
+                                <a className={classnames("page-link", styles.marked_page)} href="#page3">
+                                    3
+                            </a>
+                                :
+                                <a class="page-link" href="#page3" onClick={() => this.handleClick(3)}>
+                                    3
+                            </a>
+                            }
+                        </li>
+
+>>>>>>> 5858fa6910aadd5788c0d083babc063ddf828e56
                     </ul>
                 </nav>
             </div >
