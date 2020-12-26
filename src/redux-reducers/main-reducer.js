@@ -1,4 +1,4 @@
-import {combineReducers} from 'redux';
+import { combineReducers } from 'redux';
 import RepoReducer from '../redux-reducers/repo-reducer';
 
 const rootReducer = combineReducers({
@@ -14,7 +14,8 @@ export const MainReducerActionType = {
 export default function MainReducers(state, action) {
     switch (action.type) {
         case MainReducerActionType.Clear:
-            state = undefined
+            state = undefined;
+            break;
         default: return rootReducer(state, action);
     }
 }
