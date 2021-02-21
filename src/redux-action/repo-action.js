@@ -1,9 +1,11 @@
 import Axios from 'axios';
 import { api, github_allApi } from '../constants/apis.constant';
-import { today } from '../utils/utils';
+import { myDate } from '../utils/utils';
 
 var currentPage = 0;
 export const _GetRepositoryName = () => (dispatch, data) => {
+    // console.log(today)
+    console.log(myDate);
     currentPage += 1;
     dispatch({
         type: "LOADING",
@@ -11,14 +13,13 @@ export const _GetRepositoryName = () => (dispatch, data) => {
     });
 
 
-    Axios.get(api.github_api.replace('{{today}}', today).replace('{{currentPage}}', currentPage)).
+    Axios.get(api.github_api.replace("{{myDate}}", myDate).replace('{{currentPage}}', currentPage)).
 
         then(response => {
             // console.log(curr)
             console.log(response)
 
             let data = [];
-            let dataConcat = [];
             response.data.items.forEach((element, index) => {
 
                 data = [
@@ -38,12 +39,6 @@ export const _GetRepositoryName = () => (dispatch, data) => {
                     type: "GET_REPOSITORY_DATA",
                     data: data,
                 });
-                // dispatch({
-                //     type: "TRIAL",
-                //     trial: dataConcat
-
-                // });
-
                 dispatch({
                     type: "LOADING",
                     data: false
